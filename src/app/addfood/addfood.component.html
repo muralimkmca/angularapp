@@ -1,13 +1,22 @@
 <div>
     <form #addFood="ngForm" (ngSubmit)="onSubmit(addFood.value)">
     <br>
+    <br>    
+    <!-- <input type="text" name="foodname" ngModel><br><br> -->
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Food Name</mat-label>        
+        <input matInput placeholder="Ex. Pizza" name="foodname" required ngModel>                
+    </mat-form-field>
     <br>
-    <label>FoodName</label><br>
-    <input type="text" name="foodname" ngModel><br><br>
 
-    <label>FoodDescription</label><br>
-    <input type="text" name="fooddesc" ngModel><br>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Food Description</mat-label>
+        <input matInput placeholder="Breakfast food" name="fooddesc" ngModel>
+    </mat-form-field>
 
-    <button>Save</button>
+    <br>
+    <mat-card-actions>
+    <button mat-raised-button color="primary">Save</button> 
+    </mat-card-actions>   
     </form>
 </div>
