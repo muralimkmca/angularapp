@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
+import { HttpClient} from '@angular/common/http';
 import { foodmodel } from 'src/Model/foodmodel';
 import { Observable } from 'rxjs';
 
@@ -16,4 +16,10 @@ export class FoodService {
   {
     return this.http.get<foodmodel[]>(this.baseUrl);
   }
+
+  addFoods(food:foodmodel): Observable<foodmodel>
+  {
+    return this.http.post<foodmodel>(this.baseUrl,food);
+  }
+
 }

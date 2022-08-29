@@ -1,0 +1,13 @@
+<div>
+    <form #addFood="ngForm" (ngSubmit)="onSubmit(addFood.value)">
+    <br>
+    <br>
+    <label>FoodName</label><br>
+    <input type="text" name="foodname" ngModel><br><br>
+
+    <label>FoodDescription</label><br>
+    <input type="text" name="fooddesc" ngModel><br>
+
+    <button>Save</button>
+    </form>
+</div>
